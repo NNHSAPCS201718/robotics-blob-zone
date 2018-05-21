@@ -16,7 +16,7 @@
       public static void main(String[] args) 
       {
            LCD.drawString("Program 3", 0, 0);
-           Butt     on.waitForAnyPress();
+           Button.waitForAnyPress();
            LCD.clear();   
          Motor.A.rotate(1440);
            LCD.drawInt(Motor.A.getTachoCount(),0,0);
