@@ -11,8 +11,15 @@ public class Run
 {
    public static void main(String[] args)
    {
-       System.out.println("Program 1");
-       this.waitForPress();
-       
+       LCD.drawString("Program 1", 0, 0);
+       Button.waitForAnyPress();
+       LCD.clear();
+       Motor.A.forward();
+       System.out.println("Forward");
+       Button.waitForAnyPress();
+       Motor.A.backward();
+       System.out.println("Backward");
+       Button.waitForAnyPress();
+       Motor.A.stop();
    }
 }
