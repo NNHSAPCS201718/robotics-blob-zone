@@ -6,23 +6,21 @@ import lejos.robotics.navigation.DifferentialPilot;
  * Trace a square 
  * @author Roger
 */
-public class Square
+public class Circle
 {
     DifferentialPilot pilot ;
     
-    public void  drawSquare(float length)
+    public void  drawCircle(double length)
     {
-        for(int i = 0; i<4 ; i++)
-        {
-            pilot.travel(length);
-            pilot.rotate(90);                 
+        while(true == true){
+            pilot.steer(length);
         }
     }
     
     public static void main(String[] args)
     {
-        Square sq = new Square();
+        Circle sq = new Circle();
         sq.pilot = new DifferentialPilot(56, 160, Motor.A, Motor.B);
-        sq.drawSquare(150);
+        sq.drawCircle(150);
     }
 }
