@@ -10,17 +10,17 @@ public class Circle
 {
     DifferentialPilot pilot ;
     
-    public void  drawCircle(double length)
+    public void  drawCircle(double length,int angle )
     {
-        while(true == true){
-            pilot.steer(length);
-        }
+
+            pilot.steer(length, angle);
+
     }
     
     public static void main(String[] args)
     {
         Circle sq = new Circle();
         sq.pilot = new DifferentialPilot(56, 160, Motor.A, Motor.B);
-        sq.drawCircle(150);
+        sq.drawCircle(40,360);
     }
 }
